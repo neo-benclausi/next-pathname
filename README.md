@@ -9,7 +9,7 @@ Compatible with Next.js App Router 14 and 15.
 Add the package to your Next.js App Router project:
 
 ```
-npm i next-rsc-pathname
+npm i next-pathname
 ```
 
 ## How it works
@@ -26,7 +26,7 @@ If you don't already have a `middleware.ts`, create one and add the following co
 
 ```ts
 // src/middleware.ts
-import { withPathname } from "next-rsc-pathname";
+import { withPathname } from "next-pathname";
 
 export const middleware = withPathname;
 ```
@@ -39,7 +39,7 @@ Typically you'll want to include this after any other request handling you may a
 
 ```ts
 // src/middleware.ts
-import { withPathname } from "next-rsc-pathname";
+import { withPathname } from "next-pathname";
 
 export const middleware = async (request: NextRequest) => {
   // do some request preprocessing...
@@ -63,14 +63,14 @@ Due to API changes between Next.js 14 and 15, the way to access the URL pathname
 
 Ensure you're using the correct import for your Next.js version.
 
-- For Next.js 14, import from `"next-rsc-pathname/next14"`.
-- For Next.js 15, import from `"next-rsc-pathname/next15"`.
+- For Next.js 14, import from `"next-pathname/next14"`.
+- For Next.js 15, import from `"next-pathname/next15"`.
 
 ### Next 14.x
 
 ```tsx
 // src/app/my-route/page.tsx
-import { getPathname } from "next-rsc-pathname/next14";
+import { getPathname } from "next-pathname/next14";
 
 export default function Page() {
   const pathname = getPathname();
@@ -87,7 +87,7 @@ export default function Page() {
 
 ```tsx
 // src/app/my-route/page.tsx
-import { getPathname } from "next-rsc-pathname/next15";
+import { getPathname } from "next-pathname/next15";
 
 export default async function Page() {
   const pathname = await getPathname();

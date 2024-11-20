@@ -1,6 +1,6 @@
 {
   "name": "next-pathname",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Access request pathname in Next.js RSCs",
   "type": "module",
   "repository": {
