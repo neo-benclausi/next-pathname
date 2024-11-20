@@ -1,0 +1,34 @@
+{
+  "name": "next-pathname",
+  "version": "1.0.1",
+  "description": "Access request pathname in Next.js RSCs",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo-benclausi/next-pathname"
+  },
+  "exports": {
+    "./next14": {
+      "types": "./dist/next14.d.ts",
+      "import": "./dist/next14.js"
+    },
+    "./next15": {
+      "types": "./dist/next15.d.ts",
+      "import": "./dist/next15.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/next14.ts src/next15.ts --format esm --dts"
+  },
+  "keywords": [],
+  "author": "neo-benclausi",
+  "license": "MIT",
+  "devDependencies": {
+    "next": "14",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "next": "^14 || ^15"
+  }
+}
